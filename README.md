@@ -1,59 +1,96 @@
-📢 黄区最新地址发布提醒
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>黄区最新地址发布页</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", sans-serif;
+      background-color: #fdf6ec;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h1 {
+      color: #d9534f;
+      font-size: 1.8em;
+    }
+    .highlight {
+      color: #d9534f;
+      font-weight: bold;
+    }
+    .box {
+      background: #fff;
+      border-left: 6px solid #f0ad4e;
+      padding: 15px 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    ul {
+      padding-left: 1.5em;
+    }
+    a {
+      color: #0275d8;
+      text-decoration: none;
+      word-break: break-all;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .footer {
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
 
-🔗最新域名：
-👉 hq11.top
-📌 请直接在浏览器输入，不要用搜索引擎！
+  <h1>📢 黄区最新地址发布提醒</h1>
 
-🔒 海外永久入口：
-🌍 huangqu.vip
-（推荐用 火狐浏览器）
+  <div class="box">
+    <p><span class="highlight">本站永久回家域名：</span> <strong>huangqu.top</strong></p>
+    <p>🔍 黄区的拼音 + .top 全拼：<strong>huangqu.top</strong></p>
+    <p>🔥 <strong>强烈推荐使用火狐浏览器</strong> 进行访问</p>
+    <p>📧 发送任意邮件至：<strong>hqtopvip@gmail.com</strong> 秒得最新地址</p>
+    <p>📲 提前下载防封APP，不迷路！</p>
+  </div>
 
-🧭 无法打开？请注意以下几点：
+  <div class="box">
+    <p><strong>🔗 最新域名：</strong></p>
+    <p>👉 <a href="https://hq11.top" target="_blank">hq11.top</a></p>
+    <p><strong>📌 请直接在浏览器输入，不要用搜索引擎！</strong></p>
+  </div>
 
-✔ 请在网址前加上 https://
+  <div class="box">
+    <p><strong>🔒 海外永久入口：</strong></p>
+    <p>🌍 <a href="https://huangqu.vip" target="_blank">huangqu.vip</a></p>
+    <p>（推荐用火狐浏览器）</p>
+  </div>
 
-✔ 也可以在前面加任意字母，再加个.后和域名，举个例子（lol.hq11.top）
+  <div class="box">
+    <p><strong>🧭 无法打开？请注意以下几点：</strong></p>
+    <ul>
+      <li>✔ 请在网址前加上 <code>https://</code></li>
+      <li>✔ 可以在前加任意字母，再加个点，如：<code>lol.hq11.top</code></li>
+      <li>✔ 使用 <strong>电信 / 联通</strong> 网络（移动网可能屏蔽）</li>
+      <li>✔ 推荐使用 <strong>Chrome / 夸克 / 无痕模式</strong> 打开</li>
+      <li>✔ 部分 WiFi 会限制成人内容，建议使用 4G/5G 流量</li>
+    </ul>
+  </div>
 
-✔ 请用 电信或联通 网路（移动网路会屏蔽）
+  <div class="box">
+    <p><strong>📌 永久发布页（建议收藏截图）：</strong></p>
+    <p>➡ <a href="https://huangqu.top" target="_blank">huangqu.top</a></p>
+  </div>
 
-✔ 请用 Chrome / 夸克 / 无痕模式 打开
+  <div class="footer">
+    <p>📮 如遇跳转、打不开、卡顿等问题，请留言反馈，我们会尽快处理。</p>
+    <p>📬 注意：每个邮箱每天只会收到一封通知，请勿重复留言。</p>
+  </div>
 
-✔ 有时候 WIFI 会限制大人内容，请试试用 4G/5G 数据
-
-📌 永久发布页面（建议收藏截图）：
-➡ huangqu.top
-
-📮 如果遇到跳转、打不开、卡顿等问题，欢迎留言反馈，我们会尽快处理。
-
-📬 注意：每个邮箱每天只会收到一封通知，请勿重复留言。
-
----------------------------------------------------------------------------------------------------------
-
-📢 黃區最新地址發布提醒
-
-🔗最新域名：
-👉 hq11.top
-📌 請直接在瀏覽器輸入，不要用搜索引擎！
-
-🔒 海外永久入口：
-🌍 huangqu.vip
-（火狐瀏覽器）
-
-🧭 無法打開？請注意以下幾點：
-
-✔ 請在網址前加上 https://
-
-✔ 也可以在前面加任意字母，再加個.後和域名，舉個例子（lol.hq11.top）
-
-✔ 請用 電信或聯通 網路（移動網路會屏蔽）
-
-✔ 請用 Chrome / 夸克 / 無痕模式 打開
-
-✔ 有時候 WIFI 會限制大人內容，請試試用 4G/5G 數據
-
-📌 永久發布頁面（建議收藏截圖）：
-➡ huangqu.top
-
-📮 如果遇到跳轉、打不開、卡頓等問題，歡迎留言反饋，我們會儘快處理。
-
-📬 注意：每個郵箱每天只會收到一封通知，請勿重複留言。
+</body>
+</html>
