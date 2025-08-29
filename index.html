@@ -45,6 +45,14 @@
       font-size: 0.9em;
       color: #666;
     }
+    .btn {
+      cursor: pointer;
+      padding: 8px 12px;
+      border: 0;
+      border-radius: 6px;
+      background: #f0ad4e;
+      color: #fff;
+    }
   </style>
 </head>
 <body>
@@ -59,23 +67,18 @@
     <p>📲 提前下载防封APP，不迷路！</p>
   </div>
 
-<div class="box">
-  <p><strong>🔗 最新域名（随机前缀）：</strong></p>
-  <p>👉 <a href="https://zx7.hsqy1.icu" target="_blank">zx7.hsqy1.icu</a></p>
-  <p>👉 <a href="https://m9qa.hsqy2.icu" target="_blank">m9qa.hsqy2.icu</a></p>
-  <p>👉 <a href="https://81kjs.hsqy3.icu" target="_blank">81kjs.hsqy3.icu</a></p>
-  <p>👉 <a href="https://ql2x.hsqy4.icu" target="_blank">ql2x.hsqy4.icu</a></p>
-  <p>👉 <a href="https://881hc.hsqy5.icu" target="_blank">881hc.hsqy5.icu</a></p>
-  <p>👉 <a href="https://nnc3.hsqy6.icu" target="_blank">nnc3.hsqy6.icu</a></p>
-  <p>👉 <a href="https://rtu.hsqy7.icu" target="_blank">rtu.hsqy7.icu</a></p>
-  <p>👉 <a href="https://nnc.hsqy8.icu" target="_blank">nnc.hsqy8.icu</a></p>
-  <p>👉 <a href="https://v5p9a.hsqy9.icu" target="_blank">v5p9a.hsqy9.icu</a></p>
-  <p><strong>📌 请直接在浏览器输入，不要用搜索引擎！</strong></p>
-</div>
+  <!-- 动态随机前缀的“最新域名”区块 -->
+  <div class="box" id="latest-box">
+    <p><strong>🔗 最新域名（每次打开随机前缀）：</strong></p>
+    <div id="domain-list" aria-live="polite"></div>
+    <p><button id="reroll" class="btn">🔄 换一批</button></p>
+    <p><strong>📌 请直接在浏览器输入，不要用搜索引擎！</strong></p>
+    <noscript>（需要开启 JavaScript 才能显示随机前缀链接）</noscript>
+  </div>
 
   <div class="box">
     <p><strong>🔒 海外永久入口：</strong></p>
-    <p>🌍 <a href="https://huangqu.vip" target="_blank">huangqu.vip</a></p>
+    <p>🌍 <a href="https://huangqu.vip" target="_blank" rel="noopener noreferrer">huangqu.vip</a></p>
     <p>（推荐用火狐浏览器）</p>
   </div>
 
@@ -93,13 +96,86 @@
 
   <div class="box">
     <p><strong>📌 永久发布页（建议收藏截图）：</strong></p>
-    <p>➡ <a href="https://huangqu.top" target="_blank">huangqu.top</a></p>
+    <p>➡ <a href="https://huangqu.top" target="_blank" rel="noopener noreferrer">huangqu.top</a></p>
   </div>
 
   <div class="footer">
     <p>📮 如遇跳转、打不开、卡顿等问题，请留言反馈，我们会尽快处理。</p>
     <p>📬 注意：每个邮箱每天只会收到一封通知，请勿重复留言。</p>
   </div>
+
+  <script>
+    (function () {
+      // ========= 可调节规则 =========
+      // 前缀长度范围（含端点）
+      var MIN_LEN = 3;
+      var MAX_LEN = 6;
+      // 允许的字符集（仅小写字母+数字，如需只字母/只数字可自行调整）
+      var CHARS   = 'abcdefghijklmnopqrstuvwxyz0123456789';
+      // 要生成的基础域（hsqy1~hsqy9）
+      var BASES   = [1,2,3,4,5,6,7,8,9].map(function(n){ return 'hsqy' + n + '.icu'; });
+      // =============================
+
+      // 使用更安全的随机源（若不可用则退化到 Math.random）
+      function secureRandomInt(max) {
+        if (window.crypto && window.crypto.getRandomValues) {
+          var arr = new Uint32Array(1);
+          window.crypto.getRandomValues(arr);
+          return arr[0] % max;
+        }
+        return Math.floor(Math.random() * max);
+      }
+
+      function randInt(min, max) {
+        return min + secureRandomInt(max - min + 1);
+      }
+
+      function randomPrefix() {
+        var len = randInt(MIN_LEN, MAX_LEN);
+        var out = '';
+        for (var i = 0; i < len; i++) {
+          out += CHARS.charAt(secureRandomInt(CHARS.length));
+        }
+        return out;
+      }
+
+      function buildDomains() {
+        return BASES.map(function(base){
+          var prefix = randomPrefix();
+          var host = prefix + '.' + base;   // e.g. nnc.hsqy8.icu
+          var url  = 'https://' + host;
+          return { host: host, url: url };
+        });
+      }
+
+      function render() {
+        var container = document.getElementById('domain-list');
+        if (!container) return;
+
+        var domains = buildDomains();
+        container.innerHTML = '';
+        domains.forEach(function(d){
+          var p = document.createElement('p');
+          // rel 添加安全属性；target=_blank 新开标签
+          p.innerHTML = '👉 <a href="' + d.url + '" target="_blank" rel="noopener noreferrer">' + d.host + '</a>';
+          container.appendChild(p);
+        });
+      }
+
+      // 初次渲染（页面打开时随机）
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', render);
+      } else {
+        render();
+      }
+
+      // “换一批”按钮
+      var btn = document.getElementById('reroll');
+      if (btn) {
+        btn.addEventListener('click', render);
+      }
+    })();
+  </script>
 
 </body>
 </html>
